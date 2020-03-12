@@ -14,17 +14,26 @@
 }
 
 .App-header {
-    background-color: #282c34;
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     font-size: calc(10px + 2vmin);
-    color: white;
+    margin: 0 0 50px 0;
 }
 
 .App-link {
     color: #61dafb;
+}
+
+.leaderboard-card {
+    display: flex;
+    justify-content: space-around;
+    width: 200px;
+    background: #282c34;
+    color: white;
+    margin: 13px auto;
+    border-radius: 15px;
+    font-weight: bold;
 }
 
 @keyframes App-logo-spin {

@@ -22,7 +22,7 @@ const App = () => {
 
     return (
         <div className='App'>
-            <header>
+            <header className='App-header'>
                 <h1>Rejection Leaderboard</h1>
                 <h4>
                     A place to celebrate the hustle and encourage to keep going.
