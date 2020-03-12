@@ -38,6 +38,7 @@ const App = () => {
                 Rejections: rejections
             }
         };
+
         if (method === 'new') {
             // update state
             setLeaderboard(leaderboard =>

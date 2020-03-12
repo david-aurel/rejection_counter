@@ -7,13 +7,11 @@ const Input = props => {
 
     const handleChange = e => {
         if (e.name === 'name') {
-            setMethod('new');
             setName(e.value);
             for (let el in props.leaderboard) {
                 const name = props.leaderboard[el].fields.Name;
                 if (name === e.value) {
                     setRejections(props.leaderboard[el].fields.Rejections);
-                    setMethod('update');
                 }
             }
         }
@@ -22,6 +20,23 @@ const Input = props => {
         }
     };
     const handleClick = () => {
+        let method = '';
+
+        for (let el in props.leaderboard) {
+            const oldName = props.leaderboard[el].fields.Name;
+            console.log('oldname', oldName, 'newName', name);
+
+            console.log('mathc?', oldName === name);
+
+            if (oldName === name) {
+                method = 'update';
+                break;
+            } else {
+                method = 'new';
+            }
+        }
+        console.log(name, rejections, method);
+
         props.update(name, rejections, method);
     };
     const increment = () => {
