@@ -7,13 +7,13 @@ const Input = props => {
 
     const handleChange = e => {
         if (e.name === 'name') {
-            setMethod('post');
+            setMethod('new');
             setName(e.value);
             for (let el in props.leaderboard) {
                 const name = props.leaderboard[el].fields.Name;
                 if (name === e.value) {
                     setRejections(props.leaderboard[el].fields.Rejections);
-                    setMethod('put');
+                    setMethod('update');
                 }
             }
         }

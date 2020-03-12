@@ -14,7 +14,6 @@ const base = Airtable.base('appnyr5eqMsqFclKj');
 
 const App = () => {
     const [leaderboard, setLeaderboard] = useState([]);
-    const [test, setTest] = useState('');
 
     const fetchData = () => {
         base('Table 1')
@@ -24,6 +23,7 @@ const App = () => {
             })
             .eachPage((records, fetchNextPage) => {
                 setLeaderboard(records);
+                fetchNextPage();
             });
     };
 
@@ -38,12 +38,36 @@ const App = () => {
                 Rejections: rejections
             }
         };
-        base('Table 1').create([newRecord]);
-        setLeaderboard(leaderboard =>
-            [...leaderboard, newRecord].sort(
-                (a, b) => b.fields.Rejections - a.fields.Rejections
-            )
-        );
+        if (method === 'new') {
+            // update state
+            setLeaderboard(leaderboard =>
+                [...leaderboard, newRecord].sort(
+                    (a, b) => b.fields.Rejections - a.fields.Rejections
+                )
+            );
+
+            // update airtable
+            base('Table 1').create([newRecord]);
+        } else if (method === 'update') {
+            // update state
+            const updatedObj = leaderboard.map(e => {
+                if (e.fields.Name === name) {
+                    e = {
+                        ...e,
+                        fields: { ...e.fields, Rejections: rejections }
+                    };
+                }
+                return e;
+            });
+            setLeaderboard(
+                updatedObj.sort(
+                    (a, b) => b.fields.Rejections - a.fields.Rejections
+                )
+            );
+
+            // update airtable
+            updateAirTable(name, rejections);
+        }
     };
 
     return (
@@ -55,7 +79,6 @@ const App = () => {
                 </h4>
             </header>
             <main>
-                <p>{test}</p>
                 <Input leaderboard={leaderboard} update={update} />
                 <div className='leaderboard'>
                     {leaderboard.map((entry, idx) => (
@@ -68,3 +91,26 @@ const App = () => {
 };
 
 export default App;
+
+const updateAirTable = (name, rejections) => {
+    base('Table 1')
+        .select({
+            filterByFormula: `{Name} = "${name}"`,
+            maxRecords: 1
+        })
+        .eachPage((records, fetchNextPage) => {
+            records.forEach(function(record) {
+                base('Table 1').update([
+                    {
+                        id: record.id,
+                        fields: {
+                            Name: name,
+                            Rejections: rejections
+                        }
+                    }
+                ]);
+            });
+
+            fetchNextPage();
+        });
+};
