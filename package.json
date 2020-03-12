@@ -19,6 +19,8 @@
     },
     "homepage": "https://github.com/david-aurel/rejection_counter#readme",
     "dependencies": {
+        "airtable": "^0.8.1",
+        "axios": "^0.19.2",
         "express": "^4.17.1"
     }
 }

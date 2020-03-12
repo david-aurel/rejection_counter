@@ -3,14 +3,18 @@ import logo from './logo.svg';
 import './App.css';
 import Leaderboard from './leaderboard';
 import axios from 'axios';
+import secrets from './secrets';
+const apiKey = secrets.AIRTABLE_API_KEY;
 
 const App = () => {
-    const [dataState, setDataState] = useState({});
+    const [dataState, setDataState] = useState('initial');
 
     async function fetchData() {
-        const { data } = await axios.get('/express-backend');
+        const { data } = await axios.get(
+            'https://api.airtable.com/v0/appnyr5eqMsqFclKj/Table%201?api_key=' +
+                apiKey
+        );
         setDataState(data);
-        console.log(dataState);
     }
     useEffect(() => {
         fetchData();
@@ -21,9 +25,9 @@ const App = () => {
             <header className='App-header'>
                 <h1>Rejection Leaderboard</h1>
                 <h4>
-                    Who's got the most job offer rejections? A place to
-                    celebrate the hustle encouragement to keep going
+                    A place to celebrate the hustle and encourage to keep going.
                 </h4>
+                <p>{dataState.express}</p>
             </header>
         </div>
     );
