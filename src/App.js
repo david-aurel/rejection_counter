@@ -2,46 +2,48 @@ import React, { useState, useEffect } from 'react';
 import Leaderboard from './leaderboard';
 import Input from './input';
 import './App.css';
-import axios from 'axios';
+
+// Airtable
 import secrets from './secrets';
-const apiKey = secrets.AIRTABLE_API_KEY;
+const Airtable = require('airtable');
+Airtable.configure({
+    endpointUrl: 'https://api.airtable.com',
+    apiKey: secrets.AIRTABLE_API_KEY
+});
+const base = Airtable.base('appnyr5eqMsqFclKj');
 
 const App = () => {
     const [leaderboard, setLeaderboard] = useState([]);
-    const sort = () => {
-        setLeaderboard(
-            [...leaderboard].sort(
-                (a, b) => b.fields.Rejections - a.fields.Rejections
-            )
-        );
+    const [test, setTest] = useState('');
+
+    const fetchData = () => {
+        base('Table 1')
+            .select({
+                view: 'Grid view',
+                sort: [{ field: 'Rejections', direction: 'desc' }]
+            })
+            .eachPage((records, fetchNextPage) => {
+                setLeaderboard(records);
+            });
     };
 
-    async function fetchData() {
-        const { data } = await axios.get(
-            'https://api.airtable.com/v0/appnyr5eqMsqFclKj/Table%201?api_key=' +
-                apiKey +
-                '&sort%5B0%5D%5Bfield%5D=Rejections&sort%5B0%5D%5Bdirection%5D=desc'
-        );
-
-        setLeaderboard(data.records);
-    }
     useEffect(() => {
         fetchData();
     }, []);
 
-    const update = async () => {
+    const update = (name, rejections, method) => {
         const newRecord = {
             fields: {
-                Name: 'Test1',
-                Rejections: 123
+                Name: name,
+                Rejections: rejections
             }
         };
-        await axios.post(
-            'https://api.airtable.com/v0/appnyr5eqMsqFclKj/Table%201?api_key=' +
-                apiKey,
-            { records: [newRecord] }
+        base('Table 1').create([newRecord]);
+        setLeaderboard(leaderboard =>
+            [...leaderboard, newRecord].sort(
+                (a, b) => b.fields.Rejections - a.fields.Rejections
+            )
         );
-        fetchData();
     };
 
     return (
@@ -53,6 +55,7 @@ const App = () => {
                 </h4>
             </header>
             <main>
+                <p>{test}</p>
                 <Input leaderboard={leaderboard} update={update} />
                 <div className='leaderboard'>
                     {leaderboard.map((entry, idx) => (
