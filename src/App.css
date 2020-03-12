@@ -1,16 +1,23 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* design system */
+:root {
+    --main-bg-color: #282c34;
+    --update: #009688;
+    --danger: #ff5722;
+    --border-radius: 10px;
+    --input-font-size: 1.1rem;
+    --sm-margin: 5px;
+    --sm-padding: 5px;
+    --md-padding: 10px;
+}
+
+/* styles */
 .App {
     text-align: center;
-}
-
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
 }
 
 .App-header {
@@ -21,26 +28,94 @@
     margin: 0 0 50px 0;
 }
 
+h1 {
+    margin: 20px;
+}
+
 .App-link {
     color: #61dafb;
 }
 
+/* input */
+
+.input-fields {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.counter {
+    display: flex;
+    margin: var(--sm-margin);
+}
+
+input {
+    outline: none;
+}
+input[name='name'] {
+    border: 2px solid var(--main-bg-color);
+    border-radius: var(--border-radius);
+    font-size: var(--input-font-size);
+    padding: var(--md-padding);
+    margin: var(--sm-margin);
+    width: 150px;
+}
+
+input::placeholder {
+    color: var(--main-bg-color);
+    font-weight: bold;
+    font-size: var(--input-font-size);
+}
+
+input[name='number'] {
+    border: none;
+    font-size: 2rem;
+    font-weight: bold;
+    width: 60px;
+    text-align: center;
+}
+
+.counter button {
+    border: none;
+    font-size: 1.7rem;
+    font-weight: bold;
+    outline: none;
+}
+
+.input-buttons button {
+    font-size: var(--input-font-size);
+    border-radius: var(--border-radius);
+    padding: 2px 20px;
+    margin: var(--sm-margin);
+}
+
+.input-buttons button:first-of-type {
+    border: 2px solid var(--update);
+    color: var(--update);
+}
+.input-buttons button:last-of-type {
+    border: 2px solid var(--danger);
+    color: var(--danger);
+}
+
+/* leaderboard */
+
+.leaderboard {
+    margin: 40px;
+}
 .leaderboard-card {
     display: flex;
     justify-content: space-around;
     width: 200px;
-    background: #282c34;
+    background: var(--main-bg-color);
     color: white;
     margin: 13px auto;
-    border-radius: 15px;
+    border-radius: var(--border-radius);
     font-weight: bold;
+    padding: 12px;
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+.leaderboard div:first-of-type:before {
+    content: '🎉';
+    font-size: 30px;
 }

@@ -86,9 +86,7 @@ const App = () => {
         <div className='App'>
             <header className='App-header'>
                 <h1>Rejection Leaderboard</h1>
-                <h4>
-                    A place to celebrate the hustle and encourage to keep going
-                </h4>
+                <h4>Celebrate the hustle. Keep going.</h4>
             </header>
             <main>
                 <Input

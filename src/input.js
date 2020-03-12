@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 const Input = props => {
     const [rejections, setRejections] = useState(0);
     const [name, setName] = useState('');
-    const [method, setMethod] = useState('');
 
     const handleChange = e => {
         if (e.name === 'name') {
@@ -52,26 +51,29 @@ const Input = props => {
     };
     return (
         <div className='input'>
-            <p>{method}</p>
-            <input
-                type='text'
-                placeholder='Your name'
-                name='name'
-                autoComplete='off'
-                onChange={e => handleChange(e.target)}
-            />
-            <div className='counter'>
-                <button onClick={() => decrement()}>-</button>
+            <div className='input-fields'>
                 <input
                     type='text'
-                    value={rejections}
-                    name='number'
+                    placeholder='Your name'
+                    name='name'
+                    autoComplete='off'
                     onChange={e => handleChange(e.target)}
                 />
-                <button onClick={() => increment()}>+</button>
+                <div className='counter'>
+                    <button onClick={() => decrement()}>-</button>
+                    <input
+                        type='text'
+                        value={rejections}
+                        name='number'
+                        onChange={e => handleChange(e.target)}
+                    />
+                    <button onClick={() => increment()}>+</button>
+                </div>
             </div>
-            <button onClick={e => handleClick(e.target)}>Update</button>
-            <button onClick={e => handleClick(e.target)}>Delete</button>
+            <div className='input-buttons'>
+                <button onClick={e => handleClick(e.target)}>Update</button>
+                <button onClick={e => handleClick(e.target)}>Delete</button>
+            </div>
         </div>
     );
 };
