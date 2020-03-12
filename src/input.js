@@ -19,25 +19,30 @@ const Input = props => {
             setRejections(Number(e.value));
         }
     };
-    const handleClick = () => {
-        let method = '';
+    const handleClick = e => {
+        if (e.innerText === 'Update') {
+            let method = '';
+            for (let el in props.leaderboard) {
+                const oldName = props.leaderboard[el].fields.Name;
+                console.log('oldname', oldName, 'newName', name);
 
-        for (let el in props.leaderboard) {
-            const oldName = props.leaderboard[el].fields.Name;
-            console.log('oldname', oldName, 'newName', name);
+                console.log('mathc?', oldName === name);
 
-            console.log('mathc?', oldName === name);
-
-            if (oldName === name) {
-                method = 'update';
-                break;
-            } else {
-                method = 'new';
+                if (oldName === name) {
+                    method = 'update';
+                    break;
+                } else {
+                    method = 'new';
+                }
             }
-        }
-        console.log(name, rejections, method);
+            console.log(name, rejections, method);
 
-        props.update(name, rejections, method);
+            props.update(name, rejections, method);
+        }
+
+        if (e.innerText === 'Delete') {
+            props.destroy(name);
+        }
     };
     const increment = () => {
         setRejections(rejections + 1);
@@ -66,6 +71,7 @@ const Input = props => {
                 <button onClick={() => increment()}>+</button>
             </div>
             <button onClick={e => handleClick(e.target)}>Update</button>
+            <button onClick={e => handleClick(e.target)}>Delete</button>
         </div>
     );
 };

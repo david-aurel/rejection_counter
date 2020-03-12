@@ -71,6 +71,17 @@ const App = () => {
         }
     };
 
+    const destroy = name => {
+        // update state
+        const updatedObj = [...leaderboard].filter(
+            obj => obj.fields.Name !== name
+        );
+        setLeaderboard(updatedObj);
+
+        // destroy airtable record
+        destroyAirTableRecord(name);
+    };
+
     return (
         <div className='App'>
             <header className='App-header'>
@@ -80,7 +91,11 @@ const App = () => {
                 </h4>
             </header>
             <main>
-                <Input leaderboard={leaderboard} update={update} />
+                <Input
+                    leaderboard={leaderboard}
+                    update={update}
+                    destroy={destroy}
+                />
                 <div className='leaderboard'>
                     {leaderboard.map((entry, idx) => (
                         <Leaderboard {...entry.fields} key={idx} />
@@ -113,5 +128,17 @@ const updateAirTable = (name, rejections) => {
             });
 
             fetchNextPage();
+        });
+};
+
+const destroyAirTableRecord = name => {
+    base('Table 1')
+        .select({
+            filterByFormula: `{Name} = "${name}"`
+        })
+        .eachPage((records, fetchNextPage) => {
+            records.forEach(function(record) {
+                base('Table 1').destroy([record.id]);
+            });
         });
 };
