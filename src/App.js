@@ -2,33 +2,17 @@ import React, { useState, useEffect } from 'react';
 import Leaderboard from './leaderboard';
 import Input from './input';
 import './App.css';
-
-// Airtable
-import secrets from './secrets';
-const Airtable = require('airtable');
-Airtable.configure({
-    endpointUrl: 'https://api.airtable.com',
-    apiKey: secrets.AIRTABLE_API_KEY
-});
-const base = Airtable.base('appnyr5eqMsqFclKj');
+import axios from 'axios';
 
 const App = () => {
     const [leaderboard, setLeaderboard] = useState([]);
-
-    const fetchData = () => {
-        base('Table 1')
-            .select({
-                view: 'Grid view',
-                sort: [{ field: 'Rejections', direction: 'desc' }]
-            })
-            .eachPage((records, fetchNextPage) => {
-                setLeaderboard(records);
-                fetchNextPage();
-            });
-    };
+    const [error, setError] = useState(false);
 
     useEffect(() => {
-        fetchData();
+        (async () => {
+            const { data } = await axios.get('/getData');
+            setLeaderboard(data);
+        })();
     }, []);
 
     const update = (name, rejections, method) => {
@@ -48,7 +32,12 @@ const App = () => {
             );
 
             // update airtable
-            base('Table 1').create([newRecord]);
+            try {
+                axios.post('/createRecord', newRecord);
+            } catch (error) {
+                setError(true);
+                console.log(error);
+            }
         } else if (method === 'update') {
             // update state
             const updatedObj = leaderboard.map(e => {
@@ -67,7 +56,15 @@ const App = () => {
             );
 
             // update airtable
-            updateAirTable(name, rejections);
+            try {
+                axios.post('/updateRecord', {
+                    name: name,
+                    rejections: rejections
+                });
+            } catch (error) {
+                setError(true);
+                console.log(error);
+            }
         }
     };
 
@@ -79,7 +76,7 @@ const App = () => {
         setLeaderboard(updatedObj);
 
         // destroy airtable record
-        destroyAirTableRecord(name);
+        axios.post('/deleteRecord', name);
     };
 
     return (
@@ -106,38 +103,3 @@ const App = () => {
 };
 
 export default App;
-
-const updateAirTable = (name, rejections) => {
-    base('Table 1')
-        .select({
-            filterByFormula: `{Name} = "${name}"`,
-            maxRecords: 1
-        })
-        .eachPage((records, fetchNextPage) => {
-            records.forEach(function(record) {
-                base('Table 1').update([
-                    {
-                        id: record.id,
-                        fields: {
-                            Name: name,
-                            Rejections: rejections
-                        }
-                    }
-                ]);
-            });
-
-            fetchNextPage();
-        });
-};
-
-const destroyAirTableRecord = name => {
-    base('Table 1')
-        .select({
-            filterByFormula: `{Name} = "${name}"`
-        })
-        .eachPage((records, fetchNextPage) => {
-            records.forEach(function(record) {
-                base('Table 1').destroy([record.id]);
-            });
-        });
-};
