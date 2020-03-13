@@ -1,18 +1,15 @@
 const functions = require('firebase-functions');
+const env = functions.config();
+
 const express = require('express');
 const app = express();
 
 // airtable
 const Airtable = require('airtable');
-const env = functions.config();
 // const base = new Airtable({ apiKey: env.airtable.key }).base(
 //     'appnyr5eqMsqFclKj'
 // );
-
-app.get('/', (req, res) => {
-    res.set('Cache-Control', 'public, max-age=60*60*24, s-maxage=60*60*24');
-    res.sendFile('/../public/index.html');
-});
+console.log(env);
 
 app.get('/getData', (req, res) => {
     console.log('/getData hit');
@@ -45,7 +42,6 @@ app.post('/destroyRecord', (req, res) => {
         console.log('err in /destroyRecord:', error);
     }
 });
-
 
 // fetch data
 // const fetchData = () => {

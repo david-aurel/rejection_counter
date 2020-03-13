@@ -15,6 +15,7 @@ const base = Airtable.base('appnyr5eqMsqFclKj');
 const App = () => {
     const [leaderboard, setLeaderboard] = useState([]);
     const [message, setMessage] = useState('');
+    const [error, setError] = useState(false);
 
     const fetchData = () => {
         base('Table 1')
@@ -106,8 +107,10 @@ const App = () => {
         <div className='App'>
             <header className='App-header'>
                 <h1>Rejection Leaderboard</h1>
-                <p>How many rejections or no replies have you got so far?</p>
-                <h4>Celebrate the hustle. Keep going.</h4>
+                <p>
+                    How many rejections / unanswered applications have you got
+                    so far?
+                </p>
             </header>
             <main>
                 <p>{message.message}</p>
