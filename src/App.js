@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Leaderboard from './leaderboard';
 import Input from './input';
-import Error from './error';
 import './App.css';
 import axios from 'axios';
 
@@ -10,11 +9,13 @@ import axios from 'axios';
 const App = () => {
     const [leaderboard, setLeaderboard] = useState([]);
     const [error, setError] = useState(false);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         (async () => {
             try {
                 const { data } = await axios.get('/api/getData');
+                setLoading(false);
                 setLeaderboard(data);
             } catch (error) {
                 setError(true);
@@ -65,22 +66,19 @@ const App = () => {
                 console.log(err);
                 setError(true);
             });
+        } else if (method === 'destroy') {
+            // update state
+            const updatedObj = [...leaderboard].filter(
+                obj => obj.fields.Name !== name
+            );
+            setLeaderboard(updatedObj);
+
+            // destroy airtable record
+            axios.post('/api/destroyRecord', { name: name }).catch(err => {
+                console.log(err);
+                setError(true);
+            });
         }
-    };
-
-    const destroy = name => {
-        // update state
-        const updatedObj = [...leaderboard].filter(
-            obj => obj.fields.Name !== name
-        );
-        setLeaderboard(updatedObj);
-
-        // destroy airtable record
-
-        axios.post('/api/destroyRecord', { name: name }).catch(err => {
-            console.log(err);
-            setError(true);
-        });
     };
 
     return (
@@ -90,13 +88,10 @@ const App = () => {
                 <h4>Celebrate the hustle. Keep going.</h4>
             </header>
             <main>
-                <Input
-                    leaderboard={leaderboard}
-                    update={update}
-                    destroy={destroy}
-                />
+                <Input leaderboard={leaderboard} update={update} />
+                {loading && <p className='loading'>Loading...</p>}
                 {error ? (
-                    <Error />
+                    <p className='error'>Something went wrong... :(</p>
                 ) : (
                     <div className='leaderboard'>
                         {leaderboard.map((entry, idx) => (

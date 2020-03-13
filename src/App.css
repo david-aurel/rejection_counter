@@ -38,10 +38,14 @@ h1 {
 
 /* input */
 
+.input {
+    display: inline-block;
+}
+
 .input-fields {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
 }
 
 .counter {
@@ -52,6 +56,7 @@ h1 {
 input {
     outline: none;
 }
+
 input[name='name'] {
     border: 2px solid var(--main-bg-color);
     border-radius: var(--border-radius);
@@ -82,20 +87,14 @@ input[name='number'] {
     outline: none;
 }
 
-.input-buttons button {
+.update-button {
     font-size: var(--input-font-size);
     border-radius: var(--border-radius);
-    padding: 2px 20px;
+    padding: var(--sm-margin);
     margin: var(--sm-margin);
-}
-
-.input-buttons button:first-of-type {
     border: 2px solid var(--update);
     color: var(--update);
-}
-.input-buttons button:last-of-type {
-    border: 2px solid var(--danger);
-    color: var(--danger);
+    width: 100%;
 }
 
 /* leaderboard */
@@ -121,7 +120,8 @@ input[name='number'] {
 }
 
 /* error */
-.error {
+.error,
+.loading {
     margin: 50px;
     color: black;
     font-style: italic;

@@ -21,22 +21,23 @@ const Input = props => {
     const handleClick = e => {
         if (e.innerText === 'Update') {
             let method = '';
-            for (let el in props.leaderboard) {
-                const oldName = props.leaderboard[el].fields.Name;
-
-                if (oldName === name) {
-                    method = 'update';
-                    break;
-                } else {
-                    method = 'new';
+            if (name === '') {
+                return;
+            } else if (rejections === 0) {
+                method = 'destroy';
+            } else {
+                for (let el in props.leaderboard) {
+                    const oldName = props.leaderboard[el].fields.Name;
+                    if (oldName === name) {
+                        method = 'update';
+                        break;
+                    } else {
+                        method = 'new';
+                    }
                 }
             }
 
             props.update(name, rejections, method);
-        }
-
-        if (e.innerText === 'Delete') {
-            props.destroy(name);
         }
     };
     const increment = () => {
@@ -66,10 +67,12 @@ const Input = props => {
                     <button onClick={() => increment()}>+</button>
                 </div>
             </div>
-            <div className='input-buttons'>
-                <button onClick={e => handleClick(e.target)}>Update</button>
-                <button onClick={e => handleClick(e.target)}>Delete</button>
-            </div>
+            <button
+                className='update-button'
+                onClick={e => handleClick(e.target)}
+            >
+                Update
+            </button>
         </div>
     );
 };
