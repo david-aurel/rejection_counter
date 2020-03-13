@@ -2,13 +2,13 @@ import React, { useState, useEffect } from 'react';
 import Leaderboard from './leaderboard';
 import Input from './input';
 import './App.css';
+import axios from 'axios';
 
 // Airtable
-import secrets from './secrets';
 const Airtable = require('airtable');
 Airtable.configure({
     endpointUrl: 'https://api.airtable.com',
-    apiKey: secrets.AIRTABLE_API_KEY
+    apiKey: 'key0LLjLRT7rsetO9'
 });
 const base = Airtable.base('appnyr5eqMsqFclKj');
 
@@ -29,6 +29,10 @@ const App = () => {
 
     useEffect(() => {
         fetchData();
+        (async () => {
+            const { data } = await axios.get('/api/message');
+            console.log(data);
+        })();
     }, []);
 
     const update = (name, rejections, method) => {
