@@ -5053,3 +5053,336 @@ SyntaxError: missing ) after argument list
 [info] i  functions: Finished "app" in ~1s
 [debug] [2020-03-13T19:44:30.590Z] [worker-app-8c6ddfc3-f1bf-4e7a-8b0e-0bf218948bec]: IDLE
 [debug] [2020-03-13T19:44:30.590Z] [work-queue] {"queueLength":0,"workRunningCount":54}
+[debug] [2020-03-13T19:46:20.616Z] [work-queue] {"queueLength":1,"workRunningCount":54}
+[debug] [2020-03-13T19:46:20.617Z] [work-queue] {"queueLength":0,"workRunningCount":55}
+[debug] [2020-03-13T19:46:20.617Z] Accepted request GET /rejection-leaderboard/europe-west1/app/api/getData --> app
+[debug] [2020-03-13T19:46:20.617Z] [worker-pool] submitWork(triggerId=app)
+[debug] [2020-03-13T19:46:20.617Z] [worker-app-8c6ddfc3-f1bf-4e7a-8b0e-0bf218948bec]: Assigning socketPath: /var/folders/q9/zbkzzvl50m32jcqfw_9dvxc40000gp/T/fire_emu_96486.sock
+[debug] [2020-03-13T19:46:20.617Z] [worker-app-8c6ddfc3-f1bf-4e7a-8b0e-0bf218948bec]: BUSY
+[debug] [2020-03-13T19:46:20.619Z] [runtime-status] [96486] Trigger "app" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-03-13T19:46:20.619Z] [runtime-status] [96486] triggerDefinition {"regions":["europe-west1"],"httpsTrigger":{},"name":"app","entryPoint":"app"}
+[debug] [2020-03-13T19:46:20.619Z] [runtime-status] [96486] Running app in mode HTTPS
+[debug] [2020-03-13T19:46:20.619Z] [runtime-status] [96486] Attempting to listen to socketPath: /var/folders/q9/zbkzzvl50m32jcqfw_9dvxc40000gp/T/fire_emu_96486.sock
+[debug] [2020-03-13T19:46:20.621Z] [functions] Runtime ready! Sending request!
+[debug] [2020-03-13T19:46:20.623Z] [runtime-status] [96486] Ephemeral server handling GET request
+[info] >  /getData hit
+[debug] [2020-03-13T19:46:20.626Z] [runtime-status] [96486] Ephemeral server survived.
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-03-13T19:46:21.196Z] [worker-app-8c6ddfc3-f1bf-4e7a-8b0e-0bf218948bec]: IDLE
+[debug] [2020-03-13T19:46:21.196Z] [work-queue] {"queueLength":0,"workRunningCount":54}
+[debug] [2020-03-13T19:49:09.306Z] File /Users/David/Desktop/code/rejection_counter/functions/index.js changed, reloading triggers
+[debug] [2020-03-13T19:49:10.310Z] [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-03-13T19:49:10.310Z] [worker-~diagnostic~-1d125d51-ade9-46d3-8b32-af9d8d0b13ae]: FINISHING
+[debug] [2020-03-13T19:49:10.310Z] [worker-pool] Marking BUSY worker to finish (app)
+[debug] [2020-03-13T19:49:10.310Z] [worker-app-1947bd8a-d14f-4923-840d-4b791635c0b7]: FINISHING
+[debug] [2020-03-13T19:49:10.310Z] [worker-pool] Marking BUSY worker to finish (app)
+[debug] [2020-03-13T19:49:10.310Z] [worker-app-e01ff5f9-354e-4f6d-969f-f963e44678eb]: FINISHING
+[debug] [2020-03-13T19:49:10.310Z] [worker-pool] Marking BUSY worker to finish (app)
+[debug] [2020-03-13T19:49:10.310Z] [worker-app-dcb327a9-e2a1-4130-9461-71112f3a3785]: FINISHING
+[debug] [2020-03-13T19:49:10.310Z] [worker-pool] Marking BUSY worker to finish (app)
+[debug] [2020-03-13T19:49:10.311Z] [worker-app-9710d3db-e409-4114-826f-2ca856ed0761]: FINISHING
+[debug] [2020-03-13T19:49:10.311Z] [worker-pool] Marking BUSY worker to finish (app)
+[debug] [2020-03-13T19:49:10.311Z] [worker-app-d8664bc4-18a7-410f-9896-28bb53f92112]: FINISHING
+[debug] [2020-03-13T19:49:10.311Z] [worker-pool] Marking BUSY worker to finish (app)
+[debug] [2020-03-13T19:49:10.311Z] [worker-app-1b79fc8d-1e42-4a84-9608-05889ae18e85]: FINISHING
+[debug] [2020-03-13T19:49:10.311Z] [worker-pool] Marking BUSY worker to finish (app)
+[debug] [2020-03-13T19:49:10.311Z] [worker-app-4389eff9-28ed-4e82-bf34-d8d88ec74d52]: FINISHING
+[debug] [2020-03-13T19:49:10.311Z] [worker-pool] Marking BUSY worker to finish (app)
+[debug] [2020-03-13T19:49:10.311Z] [worker-app-c97a2008-c8f1-4497-89ee-bb9cda7b67e4]: FINISHING
+[debug] [2020-03-13T19:49:10.311Z] [worker-pool] Marking BUSY worker to finish (app)
+[debug] [2020-03-13T19:49:10.311Z] [worker-app-490c8cea-eff0-4154-8d4b-4e5e99b6e773]: FINISHING
+[debug] [2020-03-13T19:49:10.311Z] [worker-pool] Marking BUSY worker to finish (app)
+[debug] [2020-03-13T19:49:10.311Z] [worker-app-7b77fcef-72e0-4536-a06e-c04e2eb568b4]: FINISHING
+[debug] [2020-03-13T19:49:10.311Z] [worker-pool] Marking BUSY worker to finish (app)
+[debug] [2020-03-13T19:49:10.311Z] [worker-app-984fcaa2-3155-413a-a233-1cf4b725796b]: FINISHING
+[debug] [2020-03-13T19:49:10.311Z] [worker-pool] Marking BUSY worker to finish (app)
+[debug] [2020-03-13T19:49:10.311Z] [worker-app-a87a41a0-dd3c-4ca6-9a40-b0b71ac1a729]: FINISHING
+[debug] [2020-03-13T19:49:10.311Z] [worker-pool] Marking BUSY worker to finish (app)
+[debug] [2020-03-13T19:49:10.311Z] [worker-app-305ca56b-ad92-4cf4-95d6-840d30707ee9]: FINISHING
+[debug] [2020-03-13T19:49:10.311Z] [worker-pool] Marking BUSY worker to finish (app)
+[debug] [2020-03-13T19:49:10.311Z] [worker-app-41613990-c36c-428e-8e8c-d17336bf7015]: FINISHING
+[debug] [2020-03-13T19:49:10.311Z] [worker-pool] Marking BUSY worker to finish (app)
+[debug] [2020-03-13T19:49:10.311Z] [worker-app-9615dc61-6d66-4c0f-824d-2ef8389b6959]: FINISHING
+[debug] [2020-03-13T19:49:10.311Z] [worker-pool] Marking BUSY worker to finish (app)
+[debug] [2020-03-13T19:49:10.311Z] [worker-app-c9c253c3-378d-428d-9f73-341486a4598f]: FINISHING
+[debug] [2020-03-13T19:49:10.311Z] [worker-pool] Marking BUSY worker to finish (app)
+[debug] [2020-03-13T19:49:10.312Z] [worker-app-06e886dd-76e1-4e7d-a631-3665d0423421]: FINISHING
+[debug] [2020-03-13T19:49:10.312Z] [worker-pool] Marking BUSY worker to finish (app)
+[debug] [2020-03-13T19:49:10.312Z] [worker-app-1e560dd1-20b8-4718-8c7c-b7de58b03be1]: FINISHING
+[debug] [2020-03-13T19:49:10.312Z] [worker-pool] Marking BUSY worker to finish (app)
+[debug] [2020-03-13T19:49:10.312Z] [worker-app-90c704ae-ec6c-493f-be0a-58d1906509a4]: FINISHING
+[debug] [2020-03-13T19:49:10.312Z] [worker-pool] Marking BUSY worker to finish (app)
+[debug] [2020-03-13T19:49:10.312Z] [worker-app-454ac42f-3e78-4e3e-a5c1-9a73b585d87c]: FINISHING
+[debug] [2020-03-13T19:49:10.312Z] [worker-pool] Marking BUSY worker to finish (app)
+[debug] [2020-03-13T19:49:10.312Z] [worker-app-1b55ce05-f0e3-4bc3-a68a-b519f726ab9e]: FINISHING
+[debug] [2020-03-13T19:49:10.312Z] [worker-pool] Marking BUSY worker to finish (app)
+[debug] [2020-03-13T19:49:10.312Z] [worker-app-0c75f3f0-73b3-4761-b1ac-7eba5d4e6edf]: FINISHING
+[debug] [2020-03-13T19:49:10.312Z] [worker-pool] Marking BUSY worker to finish (app)
+[debug] [2020-03-13T19:49:10.312Z] [worker-app-47507f87-cd58-4d44-9223-e6fff0cf59b2]: FINISHING
+[debug] [2020-03-13T19:49:10.312Z] [worker-pool] Marking BUSY worker to finish (app)
+[debug] [2020-03-13T19:49:10.312Z] [worker-app-a3c8b587-8061-4967-9388-d137a7ad91d5]: FINISHING
+[debug] [2020-03-13T19:49:10.312Z] [worker-pool] Marking BUSY worker to finish (app)
+[debug] [2020-03-13T19:49:10.312Z] [worker-app-c4e3324f-13dd-4283-aec4-2916755f8292]: FINISHING
+[debug] [2020-03-13T19:49:10.312Z] [worker-pool] Marking BUSY worker to finish (app)
+[debug] [2020-03-13T19:49:10.312Z] [worker-app-17b5d891-9280-4b09-82c6-e87b34ddd63e]: FINISHING
+[debug] [2020-03-13T19:49:10.312Z] [worker-pool] Marking BUSY worker to finish (app)
+[debug] [2020-03-13T19:49:10.312Z] [worker-app-554256f2-ab31-43a2-93ff-0473cc1a8d05]: FINISHING
+[debug] [2020-03-13T19:49:10.312Z] [worker-pool] Marking BUSY worker to finish (app)
+[debug] [2020-03-13T19:49:10.312Z] [worker-app-99b8445a-889e-4f1d-bdf7-6541c2c615f5]: FINISHING
+[debug] [2020-03-13T19:49:10.312Z] [worker-pool] Marking BUSY worker to finish (app)
+[debug] [2020-03-13T19:49:10.312Z] [worker-app-4579573a-328f-43cd-85a7-9e76926879ee]: FINISHING
+[debug] [2020-03-13T19:49:10.312Z] [worker-pool] Marking BUSY worker to finish (app)
+[debug] [2020-03-13T19:49:10.312Z] [worker-app-679a3ff4-e6d6-4df6-90cc-f75df047d8dc]: FINISHING
+[debug] [2020-03-13T19:49:10.312Z] [worker-pool] Marking BUSY worker to finish (app)
+[debug] [2020-03-13T19:49:10.315Z] [worker-app-076fb515-733e-43b4-b1f6-b229dc57baa1]: FINISHING
+[debug] [2020-03-13T19:49:10.315Z] [worker-pool] Marking BUSY worker to finish (app)
+[debug] [2020-03-13T19:49:10.315Z] [worker-app-96133a93-e253-4ca7-8467-0385277c52ba]: FINISHING
+[debug] [2020-03-13T19:49:10.315Z] [worker-pool] Marking BUSY worker to finish (app)
+[debug] [2020-03-13T19:49:10.316Z] [worker-app-3f07e8c1-88d1-460a-ad08-3001a8aab439]: FINISHING
+[debug] [2020-03-13T19:49:10.316Z] [worker-pool] Marking BUSY worker to finish (app)
+[debug] [2020-03-13T19:49:10.316Z] [worker-app-f6af97b5-d322-4938-9321-62f855bd6fe1]: FINISHING
+[debug] [2020-03-13T19:49:10.316Z] [worker-pool] Marking BUSY worker to finish (app)
+[debug] [2020-03-13T19:49:10.316Z] [worker-app-d9f30520-3c6c-482d-890a-30229cb1e7c1]: FINISHING
+[debug] [2020-03-13T19:49:10.316Z] [worker-pool] Marking BUSY worker to finish (app)
+[debug] [2020-03-13T19:49:10.316Z] [worker-app-729d7211-4547-409f-a364-537f94fdd18a]: FINISHING
+[debug] [2020-03-13T19:49:10.316Z] [worker-pool] Marking BUSY worker to finish (app)
+[debug] [2020-03-13T19:49:10.316Z] [worker-app-7c7d6f10-f642-4be4-95e4-1406828411ad]: FINISHING
+[debug] [2020-03-13T19:49:10.316Z] [worker-pool] Marking BUSY worker to finish (app)
+[debug] [2020-03-13T19:49:10.316Z] [worker-app-8b279b2f-f17b-4d85-aca7-7072edd41f54]: FINISHING
+[debug] [2020-03-13T19:49:10.316Z] [worker-pool] Marking BUSY worker to finish (app)
+[debug] [2020-03-13T19:49:10.316Z] [worker-app-e5d0b050-7ef0-4232-8e9f-8a415c8e4914]: FINISHING
+[debug] [2020-03-13T19:49:10.316Z] [worker-pool] Marking BUSY worker to finish (app)
+[debug] [2020-03-13T19:49:10.316Z] [worker-app-9a13a359-da53-4e9f-b2ab-02b6209794b0]: FINISHING
+[debug] [2020-03-13T19:49:10.316Z] [worker-pool] Marking BUSY worker to finish (app)
+[debug] [2020-03-13T19:49:10.316Z] [worker-app-eeb3f169-b4e9-4582-a1e5-df513a9dcb27]: FINISHING
+[debug] [2020-03-13T19:49:10.316Z] [worker-pool] Marking BUSY worker to finish (app)
+[debug] [2020-03-13T19:49:10.316Z] [worker-app-e71a1579-a738-4972-8c49-aa54ec138c6d]: FINISHING
+[debug] [2020-03-13T19:49:10.316Z] [worker-pool] Marking BUSY worker to finish (app)
+[debug] [2020-03-13T19:49:10.316Z] [worker-app-1acf7a7f-779e-4445-85b7-5f9e7db4dceb]: FINISHING
+[debug] [2020-03-13T19:49:10.316Z] [worker-pool] Marking BUSY worker to finish (app)
+[debug] [2020-03-13T19:49:10.316Z] [worker-app-8088f708-a683-4582-a26e-2f4fbb17cb08]: FINISHING
+[debug] [2020-03-13T19:49:10.316Z] [worker-pool] Marking BUSY worker to finish (app)
+[debug] [2020-03-13T19:49:10.316Z] [worker-app-61aed0a7-60fd-4911-98e8-02a31381848a]: FINISHING
+[debug] [2020-03-13T19:49:10.316Z] [worker-pool] Marking BUSY worker to finish (app)
+[debug] [2020-03-13T19:49:10.316Z] [worker-app-3f0a6c5b-18e9-480d-8289-b31709a5f739]: FINISHING
+[debug] [2020-03-13T19:49:10.316Z] [worker-pool] Marking BUSY worker to finish (app)
+[debug] [2020-03-13T19:49:10.316Z] [worker-app-eb1c0b7f-5484-4bf6-8999-cae810239733]: FINISHING
+[debug] [2020-03-13T19:49:10.316Z] [worker-pool] Marking BUSY worker to finish (app)
+[debug] [2020-03-13T19:49:10.316Z] [worker-app-197f773e-4373-4ff4-b4ff-6aa5713e05d4]: FINISHING
+[debug] [2020-03-13T19:49:10.316Z] [worker-pool] Marking BUSY worker to finish (app)
+[debug] [2020-03-13T19:49:10.316Z] [worker-app-e04885d1-843f-4609-833d-09845a4885ae]: FINISHING
+[debug] [2020-03-13T19:49:10.316Z] [worker-pool] Shutting down IDLE worker (app)
+[debug] [2020-03-13T19:49:10.316Z] [worker-app-8c6ddfc3-f1bf-4e7a-8b0e-0bf218948bec]: FINISHING
+[debug] [2020-03-13T19:49:10.324Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-03-13T19:49:10.324Z] [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-03-13T19:49:10.324Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-03-13T19:49:10.324Z] [worker-~diagnostic~-af75ed80-9d46-47eb-b53a-f5dff3ee1f2f]: Assigning socketPath: /var/folders/q9/zbkzzvl50m32jcqfw_9dvxc40000gp/T/fire_emu_97217.sock
+[debug] [2020-03-13T19:49:10.324Z] [worker-~diagnostic~-af75ed80-9d46-47eb-b53a-f5dff3ee1f2f]: BUSY
+[debug] [2020-03-13T19:49:10.326Z] [worker-~diagnostic~-1d125d51-ade9-46d3-8b32-af9d8d0b13ae]: exited
+[debug] [2020-03-13T19:49:10.326Z] [worker-~diagnostic~-1d125d51-ade9-46d3-8b32-af9d8d0b13ae]: FINISHED
+[debug] [2020-03-13T19:49:10.327Z] [worker-app-8c6ddfc3-f1bf-4e7a-8b0e-0bf218948bec]: exited
+[debug] [2020-03-13T19:49:10.327Z] [worker-app-8c6ddfc3-f1bf-4e7a-8b0e-0bf218948bec]: FINISHED
+[debug] [2020-03-13T19:49:10.931Z] [runtime-status] [97217] Functions runtime initialized. {"cwd":"/Users/David/Desktop/code/rejection_counter/functions","node_version":"13.9.0"}
+[debug] [2020-03-13T19:49:10.932Z] [runtime-status] [97217] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-03-13T19:49:10.937Z] [runtime-status] [97217] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"/Users/David/Desktop/code/rejection_counter/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-03-13T19:49:10.939Z] [runtime-status] [97217] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/David/Desktop/code/rejection_counter/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-13T19:49:10.940Z] [runtime-status] [97217] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/David/Desktop/code/rejection_counter/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-13T19:49:11.438Z] [worker-~diagnostic~-af75ed80-9d46-47eb-b53a-f5dff3ee1f2f]: IDLE
+[debug] [2020-03-13T19:53:33.114Z] [work-queue] {"queueLength":1,"workRunningCount":54}
+[debug] [2020-03-13T19:53:33.114Z] [work-queue] {"queueLength":0,"workRunningCount":55}
+[debug] [2020-03-13T19:53:33.114Z] Accepted request GET /rejection-leaderboard/europe-west1/app/api/getData --> app
+[debug] [2020-03-13T19:53:33.114Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1
+[debug] [2020-03-13T19:53:33.114Z] [worker-pool] Cleaned up workers for app: 55 --> 54
+[debug] [2020-03-13T19:53:33.122Z] [worker-pool] addWorker(app)
+[debug] [2020-03-13T19:53:33.122Z] [worker-pool] Adding worker with key app, total=55
+[debug] [2020-03-13T19:53:33.122Z] [worker-pool] submitWork(triggerId=app)
+[debug] [2020-03-13T19:53:33.122Z] [worker-app-ba00d8d9-ce03-4b76-888b-c3fb3f0f58ca]: Assigning socketPath: /var/folders/q9/zbkzzvl50m32jcqfw_9dvxc40000gp/T/fire_emu_97446.sock
+[debug] [2020-03-13T19:53:33.122Z] [worker-app-ba00d8d9-ce03-4b76-888b-c3fb3f0f58ca]: BUSY
+[debug] [2020-03-13T19:53:33.787Z] [runtime-status] [97446] Functions runtime initialized. {"cwd":"/Users/David/Desktop/code/rejection_counter/functions","node_version":"13.9.0"}
+[debug] [2020-03-13T19:53:33.788Z] [runtime-status] [97446] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-03-13T19:53:33.792Z] [runtime-status] [97446] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"/Users/David/Desktop/code/rejection_counter/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-03-13T19:53:33.793Z] [runtime-status] [97446] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/David/Desktop/code/rejection_counter/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-13T19:53:33.795Z] [runtime-status] [97446] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/David/Desktop/code/rejection_counter/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-13T19:53:34.423Z] [runtime-status] [97446] Trigger "app" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-03-13T19:53:34.423Z] [runtime-status] [97446] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"}
+[debug] [2020-03-13T19:53:34.423Z] [runtime-status] [97446] Running app in mode HTTPS
+[debug] [2020-03-13T19:53:34.429Z] [runtime-status] [97446] Attempting to listen to socketPath: /var/folders/q9/zbkzzvl50m32jcqfw_9dvxc40000gp/T/fire_emu_97446.sock
+[debug] [2020-03-13T19:53:34.432Z] [functions] Runtime ready! Sending request!
+[debug] [2020-03-13T19:53:34.439Z] [runtime-status] [97446] Ephemeral server handling GET request
+[info] >  /getData hit
+[debug] [2020-03-13T19:53:34.448Z] [runtime-status] [97446] Ephemeral server survived.
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-03-13T19:53:35.018Z] [worker-app-ba00d8d9-ce03-4b76-888b-c3fb3f0f58ca]: IDLE
+[debug] [2020-03-13T19:53:35.018Z] [work-queue] {"queueLength":0,"workRunningCount":54}
+[debug] [2020-03-13T19:54:26.247Z] [work-queue] {"queueLength":1,"workRunningCount":54}
+[debug] [2020-03-13T19:54:26.247Z] [work-queue] {"queueLength":0,"workRunningCount":55}
+[debug] [2020-03-13T19:54:26.247Z] Accepted request GET /rejection-leaderboard/europe-west1/app/api/getData --> app
+[debug] [2020-03-13T19:54:26.247Z] [worker-pool] submitWork(triggerId=app)
+[debug] [2020-03-13T19:54:26.247Z] [worker-app-ba00d8d9-ce03-4b76-888b-c3fb3f0f58ca]: Assigning socketPath: /var/folders/q9/zbkzzvl50m32jcqfw_9dvxc40000gp/T/fire_emu_97446.sock
+[debug] [2020-03-13T19:54:26.247Z] [worker-app-ba00d8d9-ce03-4b76-888b-c3fb3f0f58ca]: BUSY
+[debug] [2020-03-13T19:54:26.249Z] [runtime-status] [97446] Trigger "app" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-03-13T19:54:26.249Z] [runtime-status] [97446] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"}
+[debug] [2020-03-13T19:54:26.249Z] [runtime-status] [97446] Running app in mode HTTPS
+[debug] [2020-03-13T19:54:26.249Z] [runtime-status] [97446] Attempting to listen to socketPath: /var/folders/q9/zbkzzvl50m32jcqfw_9dvxc40000gp/T/fire_emu_97446.sock
+[debug] [2020-03-13T19:54:26.250Z] [functions] Runtime ready! Sending request!
+[debug] [2020-03-13T19:54:26.253Z] [runtime-status] [97446] Ephemeral server handling GET request
+[info] >  /getData hit
+[debug] [2020-03-13T19:54:26.256Z] [runtime-status] [97446] Ephemeral server survived.
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-03-13T19:54:26.752Z] [worker-app-ba00d8d9-ce03-4b76-888b-c3fb3f0f58ca]: IDLE
+[debug] [2020-03-13T19:54:26.752Z] [work-queue] {"queueLength":0,"workRunningCount":54}
+[debug] [2020-03-13T19:55:15.495Z] [work-queue] {"queueLength":1,"workRunningCount":54}
+[debug] [2020-03-13T19:55:15.495Z] [work-queue] {"queueLength":0,"workRunningCount":55}
+[debug] [2020-03-13T19:55:15.495Z] Accepted request GET /rejection-leaderboard/europe-west1/app/api/getData --> app
+[debug] [2020-03-13T19:55:15.495Z] [worker-pool] submitWork(triggerId=app)
+[debug] [2020-03-13T19:55:15.495Z] [worker-app-ba00d8d9-ce03-4b76-888b-c3fb3f0f58ca]: Assigning socketPath: /var/folders/q9/zbkzzvl50m32jcqfw_9dvxc40000gp/T/fire_emu_97446.sock
+[debug] [2020-03-13T19:55:15.495Z] [worker-app-ba00d8d9-ce03-4b76-888b-c3fb3f0f58ca]: BUSY
+[debug] [2020-03-13T19:55:15.496Z] [runtime-status] [97446] Trigger "app" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-03-13T19:55:15.496Z] [runtime-status] [97446] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"}
+[debug] [2020-03-13T19:55:15.496Z] [runtime-status] [97446] Running app in mode HTTPS
+[debug] [2020-03-13T19:55:15.496Z] [runtime-status] [97446] Attempting to listen to socketPath: /var/folders/q9/zbkzzvl50m32jcqfw_9dvxc40000gp/T/fire_emu_97446.sock
+[debug] [2020-03-13T19:55:15.497Z] [functions] Runtime ready! Sending request!
+[debug] [2020-03-13T19:55:15.501Z] [runtime-status] [97446] Ephemeral server handling GET request
+[debug] [2020-03-13T19:55:15.501Z] [runtime-status] [97446] Ephemeral server survived.
+[info] >  /getData hit
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-03-13T19:55:16.041Z] [worker-app-ba00d8d9-ce03-4b76-888b-c3fb3f0f58ca]: IDLE
+[debug] [2020-03-13T19:55:16.041Z] [work-queue] {"queueLength":0,"workRunningCount":54}
+[debug] [2020-03-13T19:55:30.328Z] [work-queue] {"queueLength":1,"workRunningCount":54}
+[debug] [2020-03-13T19:55:30.328Z] [work-queue] {"queueLength":0,"workRunningCount":55}
+[debug] [2020-03-13T19:55:30.328Z] Accepted request GET /rejection-leaderboard/europe-west1/app/api/getData --> app
+[debug] [2020-03-13T19:55:30.328Z] [worker-pool] submitWork(triggerId=app)
+[debug] [2020-03-13T19:55:30.328Z] [worker-app-ba00d8d9-ce03-4b76-888b-c3fb3f0f58ca]: Assigning socketPath: /var/folders/q9/zbkzzvl50m32jcqfw_9dvxc40000gp/T/fire_emu_97446.sock
+[debug] [2020-03-13T19:55:30.328Z] [worker-app-ba00d8d9-ce03-4b76-888b-c3fb3f0f58ca]: BUSY
+[debug] [2020-03-13T19:55:30.329Z] [runtime-status] [97446] Trigger "app" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-03-13T19:55:30.329Z] [runtime-status] [97446] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"}
+[debug] [2020-03-13T19:55:30.329Z] [runtime-status] [97446] Running app in mode HTTPS
+[debug] [2020-03-13T19:55:30.330Z] [runtime-status] [97446] Attempting to listen to socketPath: /var/folders/q9/zbkzzvl50m32jcqfw_9dvxc40000gp/T/fire_emu_97446.sock
+[debug] [2020-03-13T19:55:30.330Z] [functions] Runtime ready! Sending request!
+[debug] [2020-03-13T19:55:30.332Z] [runtime-status] [97446] Ephemeral server handling GET request
+[info] >  /getData hit
+[debug] [2020-03-13T19:55:30.335Z] [runtime-status] [97446] Ephemeral server survived.
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-03-13T19:55:30.850Z] [worker-app-ba00d8d9-ce03-4b76-888b-c3fb3f0f58ca]: IDLE
+[debug] [2020-03-13T19:55:30.851Z] [work-queue] {"queueLength":0,"workRunningCount":54}
+[debug] [2020-03-13T19:56:08.131Z] [work-queue] {"queueLength":1,"workRunningCount":54}
+[debug] [2020-03-13T19:56:08.131Z] [work-queue] {"queueLength":0,"workRunningCount":55}
+[debug] [2020-03-13T19:56:08.131Z] Accepted request GET /rejection-leaderboard/europe-west1/app/api/getData --> app
+[debug] [2020-03-13T19:56:08.131Z] [worker-pool] submitWork(triggerId=app)
+[debug] [2020-03-13T19:56:08.131Z] [worker-app-ba00d8d9-ce03-4b76-888b-c3fb3f0f58ca]: Assigning socketPath: /var/folders/q9/zbkzzvl50m32jcqfw_9dvxc40000gp/T/fire_emu_97446.sock
+[debug] [2020-03-13T19:56:08.131Z] [worker-app-ba00d8d9-ce03-4b76-888b-c3fb3f0f58ca]: BUSY
+[debug] [2020-03-13T19:56:08.132Z] [runtime-status] [97446] Trigger "app" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-03-13T19:56:08.132Z] [runtime-status] [97446] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"}
+[debug] [2020-03-13T19:56:08.132Z] [runtime-status] [97446] Running app in mode HTTPS
+[debug] [2020-03-13T19:56:08.133Z] [runtime-status] [97446] Attempting to listen to socketPath: /var/folders/q9/zbkzzvl50m32jcqfw_9dvxc40000gp/T/fire_emu_97446.sock
+[debug] [2020-03-13T19:56:08.134Z] [functions] Runtime ready! Sending request!
+[debug] [2020-03-13T19:56:08.138Z] [runtime-status] [97446] Ephemeral server handling GET request
+[debug] [2020-03-13T19:56:08.139Z] [runtime-status] [97446] Ephemeral server survived.
+[info] >  /getData hit
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-03-13T19:56:08.616Z] [worker-app-ba00d8d9-ce03-4b76-888b-c3fb3f0f58ca]: IDLE
+[debug] [2020-03-13T19:56:08.616Z] [work-queue] {"queueLength":0,"workRunningCount":54}
+[debug] [2020-03-13T19:56:14.986Z] [work-queue] {"queueLength":1,"workRunningCount":54}
+[debug] [2020-03-13T19:56:14.986Z] [work-queue] {"queueLength":0,"workRunningCount":55}
+[debug] [2020-03-13T19:56:14.986Z] Accepted request GET /rejection-leaderboard/europe-west1/app/api/getData --> app
+[debug] [2020-03-13T19:56:14.986Z] [worker-pool] submitWork(triggerId=app)
+[debug] [2020-03-13T19:56:14.986Z] [worker-app-ba00d8d9-ce03-4b76-888b-c3fb3f0f58ca]: Assigning socketPath: /var/folders/q9/zbkzzvl50m32jcqfw_9dvxc40000gp/T/fire_emu_97446.sock
+[debug] [2020-03-13T19:56:14.986Z] [worker-app-ba00d8d9-ce03-4b76-888b-c3fb3f0f58ca]: BUSY
+[debug] [2020-03-13T19:56:14.989Z] [runtime-status] [97446] Trigger "app" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-03-13T19:56:14.989Z] [runtime-status] [97446] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"}
+[debug] [2020-03-13T19:56:14.989Z] [runtime-status] [97446] Running app in mode HTTPS
+[debug] [2020-03-13T19:56:14.989Z] [runtime-status] [97446] Attempting to listen to socketPath: /var/folders/q9/zbkzzvl50m32jcqfw_9dvxc40000gp/T/fire_emu_97446.sock
+[debug] [2020-03-13T19:56:14.993Z] [functions] Runtime ready! Sending request!
+[debug] [2020-03-13T19:56:14.996Z] [runtime-status] [97446] Ephemeral server handling GET request
+[info] >  /getData hit
+[debug] [2020-03-13T19:56:14.996Z] [runtime-status] [97446] Ephemeral server survived.
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-03-13T19:56:15.478Z] [worker-app-ba00d8d9-ce03-4b76-888b-c3fb3f0f58ca]: IDLE
+[debug] [2020-03-13T19:56:15.478Z] [work-queue] {"queueLength":0,"workRunningCount":54}
+[debug] [2020-03-13T19:56:41.855Z] [work-queue] {"queueLength":1,"workRunningCount":54}
+[debug] [2020-03-13T19:56:41.856Z] [work-queue] {"queueLength":0,"workRunningCount":55}
+[debug] [2020-03-13T19:56:41.856Z] Accepted request GET /rejection-leaderboard/europe-west1/app/api/getData --> app
+[debug] [2020-03-13T19:56:41.856Z] [worker-pool] submitWork(triggerId=app)
+[debug] [2020-03-13T19:56:41.856Z] [worker-app-ba00d8d9-ce03-4b76-888b-c3fb3f0f58ca]: Assigning socketPath: /var/folders/q9/zbkzzvl50m32jcqfw_9dvxc40000gp/T/fire_emu_97446.sock
+[debug] [2020-03-13T19:56:41.856Z] [worker-app-ba00d8d9-ce03-4b76-888b-c3fb3f0f58ca]: BUSY
+[debug] [2020-03-13T19:56:41.858Z] [runtime-status] [97446] Trigger "app" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-03-13T19:56:41.858Z] [runtime-status] [97446] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"}
+[debug] [2020-03-13T19:56:41.858Z] [runtime-status] [97446] Running app in mode HTTPS
+[debug] [2020-03-13T19:56:41.859Z] [runtime-status] [97446] Attempting to listen to socketPath: /var/folders/q9/zbkzzvl50m32jcqfw_9dvxc40000gp/T/fire_emu_97446.sock
+[debug] [2020-03-13T19:56:41.860Z] [functions] Runtime ready! Sending request!
+[debug] [2020-03-13T19:56:41.862Z] [runtime-status] [97446] Ephemeral server handling GET request
+[info] >  /getData hit
+[debug] [2020-03-13T19:56:41.863Z] [runtime-status] [97446] Ephemeral server survived.
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-03-13T19:56:42.392Z] [worker-app-ba00d8d9-ce03-4b76-888b-c3fb3f0f58ca]: IDLE
+[debug] [2020-03-13T19:56:42.392Z] [work-queue] {"queueLength":0,"workRunningCount":54}
+[debug] [2020-03-13T19:56:45.318Z] [work-queue] {"queueLength":1,"workRunningCount":54}
+[debug] [2020-03-13T19:56:45.318Z] [work-queue] {"queueLength":0,"workRunningCount":55}
+[debug] [2020-03-13T19:56:45.318Z] Accepted request POST /rejection-leaderboard/europe-west1/app/api/destroyRecord --> app
+[debug] [2020-03-13T19:56:45.319Z] [worker-pool] submitWork(triggerId=app)
+[debug] [2020-03-13T19:56:45.319Z] [worker-app-ba00d8d9-ce03-4b76-888b-c3fb3f0f58ca]: Assigning socketPath: /var/folders/q9/zbkzzvl50m32jcqfw_9dvxc40000gp/T/fire_emu_97446.sock
+[debug] [2020-03-13T19:56:45.319Z] [worker-app-ba00d8d9-ce03-4b76-888b-c3fb3f0f58ca]: BUSY
+[debug] [2020-03-13T19:56:45.321Z] [runtime-status] [97446] Trigger "app" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-03-13T19:56:45.321Z] [runtime-status] [97446] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"}
+[debug] [2020-03-13T19:56:45.321Z] [runtime-status] [97446] Running app in mode HTTPS
+[debug] [2020-03-13T19:56:45.322Z] [runtime-status] [97446] Attempting to listen to socketPath: /var/folders/q9/zbkzzvl50m32jcqfw_9dvxc40000gp/T/fire_emu_97446.sock
+[debug] [2020-03-13T19:56:45.323Z] [functions] Runtime ready! Sending request!
+[debug] [2020-03-13T19:56:45.344Z] [runtime-status] [97446] Ephemeral server handling POST request
+[info] >  /destroyRecord hit
+[debug] [2020-03-13T19:56:45.345Z] [runtime-status] [97446] Ephemeral server survived.
+[debug] [2020-03-13T19:56:50.815Z] [work-queue] {"queueLength":1,"workRunningCount":55}
+[debug] [2020-03-13T19:56:50.815Z] [work-queue] {"queueLength":0,"workRunningCount":56}
+[debug] [2020-03-13T19:56:50.815Z] Accepted request POST /rejection-leaderboard/europe-west1/app/api/createRecord --> app
+[debug] [2020-03-13T19:56:50.819Z] [worker-pool] addWorker(app)
+[debug] [2020-03-13T19:56:50.819Z] [worker-pool] Adding worker with key app, total=56
+[debug] [2020-03-13T19:56:50.819Z] [worker-pool] submitWork(triggerId=app)
+[debug] [2020-03-13T19:56:50.820Z] [worker-app-c52b6680-1a23-4ece-8e92-eb7cf82fd7e6]: Assigning socketPath: /var/folders/q9/zbkzzvl50m32jcqfw_9dvxc40000gp/T/fire_emu_97550.sock
+[debug] [2020-03-13T19:56:50.820Z] [worker-app-c52b6680-1a23-4ece-8e92-eb7cf82fd7e6]: BUSY
+[debug] [2020-03-13T19:56:51.186Z] [runtime-status] [97550] Functions runtime initialized. {"cwd":"/Users/David/Desktop/code/rejection_counter/functions","node_version":"13.9.0"}
+[debug] [2020-03-13T19:56:51.187Z] [runtime-status] [97550] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-03-13T19:56:51.190Z] [runtime-status] [97550] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"/Users/David/Desktop/code/rejection_counter/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-03-13T19:56:51.191Z] [runtime-status] [97550] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/David/Desktop/code/rejection_counter/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-13T19:56:51.192Z] [runtime-status] [97550] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/David/Desktop/code/rejection_counter/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-13T19:56:51.717Z] [runtime-status] [97550] Trigger "app" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-03-13T19:56:51.718Z] [runtime-status] [97550] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"}
+[debug] [2020-03-13T19:56:51.718Z] [runtime-status] [97550] Running app in mode HTTPS
+[debug] [2020-03-13T19:56:51.721Z] [runtime-status] [97550] Attempting to listen to socketPath: /var/folders/q9/zbkzzvl50m32jcqfw_9dvxc40000gp/T/fire_emu_97550.sock
+[debug] [2020-03-13T19:56:51.724Z] [functions] Runtime ready! Sending request!
+[debug] [2020-03-13T19:56:51.740Z] [runtime-status] [97550] Ephemeral server handling POST request
+[info] >  /createRecord hit
+[debug] [2020-03-13T19:56:51.747Z] [runtime-status] [97550] Ephemeral server survived.
+[debug] [2020-03-13T19:58:01.249Z] [work-queue] {"queueLength":1,"workRunningCount":56}
+[debug] [2020-03-13T19:58:01.249Z] [work-queue] {"queueLength":0,"workRunningCount":57}
+[debug] [2020-03-13T19:58:01.249Z] Accepted request GET /rejection-leaderboard/europe-west1/app/api/getData --> app
+[debug] [2020-03-13T19:58:01.256Z] [worker-pool] addWorker(app)
+[debug] [2020-03-13T19:58:01.256Z] [worker-pool] Adding worker with key app, total=57
+[debug] [2020-03-13T19:58:01.256Z] [worker-pool] submitWork(triggerId=app)
+[debug] [2020-03-13T19:58:01.256Z] [worker-app-820aa86d-e6df-4792-8ae2-7c26ccc0ddfd]: Assigning socketPath: /var/folders/q9/zbkzzvl50m32jcqfw_9dvxc40000gp/T/fire_emu_97677.sock
+[debug] [2020-03-13T19:58:01.256Z] [worker-app-820aa86d-e6df-4792-8ae2-7c26ccc0ddfd]: BUSY
+[debug] [2020-03-13T19:58:01.861Z] [runtime-status] [97677] Functions runtime initialized. {"cwd":"/Users/David/Desktop/code/rejection_counter/functions","node_version":"13.9.0"}
+[debug] [2020-03-13T19:58:01.863Z] [runtime-status] [97677] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-03-13T19:58:01.866Z] [runtime-status] [97677] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"/Users/David/Desktop/code/rejection_counter/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-03-13T19:58:01.868Z] [runtime-status] [97677] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/David/Desktop/code/rejection_counter/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-13T19:58:01.869Z] [runtime-status] [97677] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/David/Desktop/code/rejection_counter/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-03-13T19:58:02.410Z] [runtime-status] [97677] Trigger "app" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "app"
+[debug] [2020-03-13T19:58:02.410Z] [runtime-status] [97677] triggerDefinition {"httpsTrigger":{},"name":"app","entryPoint":"app"}
+[debug] [2020-03-13T19:58:02.410Z] [runtime-status] [97677] Running app in mode HTTPS
+[debug] [2020-03-13T19:58:02.414Z] [runtime-status] [97677] Attempting to listen to socketPath: /var/folders/q9/zbkzzvl50m32jcqfw_9dvxc40000gp/T/fire_emu_97677.sock
+[debug] [2020-03-13T19:58:02.417Z] [functions] Runtime ready! Sending request!
+[debug] [2020-03-13T19:58:02.428Z] [runtime-status] [97677] Ephemeral server handling GET request
+[info] >  /getData hit
+[debug] [2020-03-13T19:58:02.432Z] [runtime-status] [97677] Ephemeral server survived.
+[info] i  functions: Finished "app" in ~1s
+[debug] [2020-03-13T19:58:03.004Z] [worker-app-820aa86d-e6df-4792-8ae2-7c26ccc0ddfd]: IDLE
+[debug] [2020-03-13T19:58:03.004Z] [work-queue] {"queueLength":0,"workRunningCount":56}

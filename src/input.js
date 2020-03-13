@@ -7,6 +7,7 @@ const Input = props => {
 
     const handleChange = e => {
         if (e.name === 'name') {
+            setName(e.value);
             e.value !== ''
                 ? setButtonState('update')
                 : setButtonState('inactive');

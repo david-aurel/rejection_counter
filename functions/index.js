@@ -95,4 +95,4 @@ app.post('/api/destroyRecord', (req, res) => {
 app.get('/api/message', (req, res) => {
     res.send({ message: 'Hello world!' });
 });
-exports.app = functions.region('europe-west1').https.onRequest(app);
+exports.app = functions.https.onRequest(app);

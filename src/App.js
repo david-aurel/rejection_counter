@@ -85,7 +85,9 @@ const App = () => {
         <div className='App'>
             <header className='App-header'>
                 <h1>Rejection Leaderboard</h1>
-                <h4>Celebrate the hustle. Keep going.</h4>
+                <p>
+                    How many rejections / unanswered applications have you got?
+                </p>
             </header>
             <main>
                 <Input leaderboard={leaderboard} update={update} />
