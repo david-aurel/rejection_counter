@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Leaderboard from './leaderboard';
 import Input from './input';
+import Error from './error';
 import './App.css';
 import axios from 'axios';
 
@@ -12,9 +13,12 @@ const App = () => {
 
     useEffect(() => {
         (async () => {
-            const { data } = await axios.get('/api/getData');
-            setLeaderboard(data);
-            console.log(data);
+            try {
+                const { data } = await axios.get('/api/getData');
+                setLeaderboard(data);
+            } catch (error) {
+                setError(true);
+            }
         })();
     }, []);
 
@@ -35,11 +39,10 @@ const App = () => {
             );
 
             // update airtable
-            try {
-                axios.post('/api/createRecord', newRecord);
-            } catch (error) {
+            axios.post('/api/createRecord', newRecord).catch(err => {
+                console.log(err);
                 setError(true);
-            }
+            });
         } else if (method === 'update') {
             // update state
             const updatedObj = leaderboard.map(e => {
@@ -58,11 +61,10 @@ const App = () => {
             );
 
             // update airtable
-            try {
-                axios.post('/api/updateRecord', newRecord);
-            } catch (error) {
+            axios.post('/api/updateRecord', newRecord).catch(err => {
+                console.log(err);
                 setError(true);
-            }
+            });
         }
     };
 
@@ -74,11 +76,11 @@ const App = () => {
         setLeaderboard(updatedObj);
 
         // destroy airtable record
-        try {
-            axios.post('/api/destroyRecord', { name: name });
-        } catch (error) {
+
+        axios.post('/api/destroyRecord', { name: name }).catch(err => {
+            console.log(err);
             setError(true);
-        }
+        });
     };
 
     return (
@@ -93,11 +95,15 @@ const App = () => {
                     update={update}
                     destroy={destroy}
                 />
-                <div className='leaderboard'>
-                    {leaderboard.map((entry, idx) => (
-                        <Leaderboard {...entry.fields} key={idx} />
-                    ))}
-                </div>
+                {error ? (
+                    <Error />
+                ) : (
+                    <div className='leaderboard'>
+                        {leaderboard.map((entry, idx) => (
+                            <Leaderboard {...entry.fields} key={idx} />
+                        ))}
+                    </div>
+                )}
             </main>
         </div>
     );

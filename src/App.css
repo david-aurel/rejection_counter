@@ -119,3 +119,10 @@ input[name='number'] {
     content: '🎉';
     font-size: 30px;
 }
+
+/* error */
+.error {
+    margin: 50px;
+    color: black;
+    font-style: italic;
+}

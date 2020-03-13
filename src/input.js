@@ -23,9 +23,6 @@ const Input = props => {
             let method = '';
             for (let el in props.leaderboard) {
                 const oldName = props.leaderboard[el].fields.Name;
-                console.log('oldname', oldName, 'newName', name);
-
-                console.log('mathc?', oldName === name);
 
                 if (oldName === name) {
                     method = 'update';
@@ -34,7 +31,6 @@ const Input = props => {
                     method = 'new';
                 }
             }
-            console.log(name, rejections, method);
 
             props.update(name, rejections, method);
         }
