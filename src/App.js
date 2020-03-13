@@ -2,18 +2,19 @@ import React, { useState, useEffect } from 'react';
 import Leaderboard from './leaderboard';
 import Input from './input';
 import './App.css';
+import axios from 'axios';
 
 // Airtable
-import secrets from './secrets';
 const Airtable = require('airtable');
 Airtable.configure({
     endpointUrl: 'https://api.airtable.com',
-    apiKey: secrets.AIRTABLE_API_KEY
+    apiKey: 'keygTL2ajsO6XkSRZ'
 });
 const base = Airtable.base('appnyr5eqMsqFclKj');
 
 const App = () => {
     const [leaderboard, setLeaderboard] = useState([]);
+    const [message, setMessage] = useState('');
 
     const fetchData = () => {
         base('Table 1')
@@ -29,6 +30,12 @@ const App = () => {
 
     useEffect(() => {
         fetchData();
+        (async () => {
+            const { data } = await axios.get('/api/message');
+            console.log(data);
+
+            setMessage(data);
+        })();
     }, []);
 
     const update = (name, rejections, method) => {
@@ -89,6 +96,7 @@ const App = () => {
                 <h4>Celebrate the hustle. Keep going.</h4>
             </header>
             <main>
+                <p>{message.message}</p>
                 <Input
                     leaderboard={leaderboard}
                     update={update}
