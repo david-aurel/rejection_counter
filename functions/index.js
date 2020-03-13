@@ -46,7 +46,6 @@ app.post('/destroyRecord', (req, res) => {
     }
 });
 
-exports.app = functions.https.onRequest(app);
 
 // fetch data
 // const fetchData = () => {
@@ -100,3 +99,8 @@ exports.app = functions.https.onRequest(app);
 //             });
 //         });
 // };
+app.get('/api/message', (req, res) => {
+    res.send({ message: 'Hello world!' });
+});
+
+exports.app = functions.https.onRequest(app);

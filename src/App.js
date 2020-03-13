@@ -4,14 +4,37 @@ import Input from './input';
 import './App.css';
 import axios from 'axios';
 
+// Airtable
+const Airtable = require('airtable');
+Airtable.configure({
+    endpointUrl: 'https://api.airtable.com',
+    apiKey: 'keygTL2ajsO6XkSRZ'
+});
+const base = Airtable.base('appnyr5eqMsqFclKj');
+
 const App = () => {
     const [leaderboard, setLeaderboard] = useState([]);
-    const [error, setError] = useState(false);
+    const [message, setMessage] = useState('');
+
+    const fetchData = () => {
+        base('Table 1')
+            .select({
+                view: 'Grid view',
+                sort: [{ field: 'Rejections', direction: 'desc' }]
+            })
+            .eachPage((records, fetchNextPage) => {
+                setLeaderboard(records);
+                fetchNextPage();
+            });
+    };
 
     useEffect(() => {
+        fetchData();
         (async () => {
-            const { data } = await axios.get('/getData');
-            setLeaderboard(data);
+            const { data } = await axios.get('/api/message');
+            console.log(data);
+
+            setMessage(data);
         })();
     }, []);
 
@@ -87,6 +110,7 @@ const App = () => {
                 <h4>Celebrate the hustle. Keep going.</h4>
             </header>
             <main>
+                <p>{message.message}</p>
                 <Input
                     leaderboard={leaderboard}
                     update={update}
