@@ -1,5 +1,7 @@
 A fun little project to see who has the most unanswered applications and job offer rejections. This helps to show that everybody gets rejections and your value as a person is not defined by the success in your career. Lets celebrate the person with the most rejections and encourage them to keep going!
 
+[rejection-leaderboard.firebaseapp.com](https://rejection-leaderboard.firebaseapp.com)
+
 ---
 
 ### Backend
